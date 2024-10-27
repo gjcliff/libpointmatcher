@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10.2)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include(GNUInstallDirs) # populate CMAKE_INSTALL_{LIB,BIN}DIR
 include(CheckSymbolExists)
 include(CMakePackageConfigHelpers)
@@ -340,8 +342,9 @@ set(POINTMATCHER_SRC
 	pointmatcher/DataPointsFilters/DistanceLimit.cpp
 	pointmatcher/DataPointsFilters/RemoveSensorBias.cpp
 	pointmatcher/DataPointsFilters/Sphericality.cpp
-	pointmatcher/DataPointsFilters/Saliency.cpp	
+	pointmatcher/DataPointsFilters/Saliency.cpp
 	pointmatcher/DataPointsFilters/SpectralDecomposition.cpp
+    pointmatcher/DataPointsFilters/ProjectOrthoDataPointsFilter.cpp
 #PointCloudGenerators
 	pointmatcher/PointCloudGenerator.cpp
 )
