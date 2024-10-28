@@ -32,7 +32,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-#include "DataPointsFilters/ProjectOrthoDataPointsFilter.h"
 #include "PointMatcher.h"
 #include "PointMatcherPrivate.h"
 

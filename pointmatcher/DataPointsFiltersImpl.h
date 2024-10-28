@@ -66,7 +66,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "DataPointsFilters/Sphericality.h"
 #include "DataPointsFilters/Saliency.h"
 #include "DataPointsFilters/SpectralDecomposition.h"
-
 #include "DataPointsFilters/ProjectOrthoDataPointsFilter.h"
 
 template<typename T>
