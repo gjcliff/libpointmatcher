@@ -419,11 +419,6 @@ typename PointMatcher<T>::TransformationParameters PointMatcher<T>::ICP::compute
 		//   T_iter(i+1)_iter(0) = T_iter(i+1)_iter(i) * T_iter(i)_iter(0)
 		T_iter = this->errorMinimizer->compute(
 			stepReading, reference, outlierWeights, matches) * T_iter;
-		// std::cout << "T_iter: " << T_iter << std::endl;
-		// std::cout << "stepReading: " << stepReading.features << std::endl;
-		// std::cout << "reference: " << reference.features << std::endl;
-		// std::cout << "outlierWeights: " << outlierWeights << std::endl;
-		// std::cout << "this->errorMinimizer->compute(stepReading, reference, outlierWeights, matches): " << this->errorMinimizer->compute(stepReading, reference, outlierWeights, matches) << std::endl;
 
 		// Old version
 		//T_iter = T_iter * this->errorMinimizer->compute(
@@ -459,10 +454,6 @@ typename PointMatcher<T>::TransformationParameters PointMatcher<T>::ICP::compute
 	//   T_iter(i+1)_dataIn = T_iter(i+1)_iter(0) * T_refMean_dataIn
 	//   T_iter(i+1)_dataIn = T_iter(i+1)_iter(0) * T_iter(0)_dataIn
 	// T_refIn_refMean remove the temperary frame added during initialization
-	std::cout << "T_refIn_refMean: " << T_refIn_refMean << std::endl;
-	std::cout << "T_iter: " << T_iter << std::endl;
-	std::cout << "T_refMean_dataIn: " << T_refMean_dataIn << std::endl;
-	std::cout << "T_refIn_refMean * T_iter * T_refMean_dataIn: " << T_refIn_refMean * T_iter * T_refMean_dataIn << std::endl;
 	return (T_refIn_refMean * T_iter * T_refMean_dataIn);
 }
 
